@@ -1,1 +1,104 @@
-/* Write your CSS code in this file */
+body {
+    display: flex;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(79, 108, 241, 0.383);
+    color: rgb(74, 74, 75);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+#howToPlay{
+    text-align: center;
+    font-size: 15px;
+    margin-bottom:  30px;
+}
+input {
+    min-width: 150px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+button, #submit {
+    background-color: rgb(116, 116, 120);
+    color: aliceblue;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+}
+#result {
+    color: rgb(95, 95, 180);
+    font-style: italic;
+    padding-top: 10px;
+    font-size: 20;
+    font-weight: lighter;
+}
+h3 {
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+.answerTable{
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    
+}
+
+.ans { 
+    flex: 0 0 auto;
+    min-width: 50px;
+    min-height: 38px;
+    font-size: 25px;
+    background-color:  rgba(232, 235, 249, 0.991);
+    padding: 40px;
+    text-align: center;
+    border-radius: 100%;
+    margin: 5px;
+    border: .5px solid rgb(74, 74, 75);
+}
+h3 {
+    font-size: 30px;
+}
+.red{
+    flex: 0 0 auto;
+    min-width: 50px;
+    min-height: 38px;
+    font-size: 25px;
+    background-color: rgb(230, 93, 93);
+    padding: 40px;
+    text-align: center;
+    border-radius: 100%;
+    margin: 5px;
+    border: .5px solid rgb(74, 74, 75);
+}
+.green{
+    flex: 0 0 auto;
+    min-width: 50px;
+    min-height: 38px;
+    font-size: 25px;
+    background-color: rgb(64, 188, 64);
+    padding: 40px;
+    text-align: center;
+    border-radius: 100%;
+    margin: 5px;
+    border: .5px solid rgb(74, 74, 75);
+}
+.yellow{
+    flex: 0 0 auto;
+    min-width: 50px;
+    min-height: 38px;
+    font-size: 25px;
+    background-color: rgb(210, 219, 39);
+    padding: 40px;
+    text-align: center;
+    border-radius: 100%;
+    margin: 5px;
+    border: .5px solid rgb(74, 74, 75);
+}
