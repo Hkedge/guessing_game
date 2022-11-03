@@ -191,3 +191,4 @@ describe('newGame function', () => {
     });
   });
 });
+
