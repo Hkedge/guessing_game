@@ -59,13 +59,15 @@ function pushAnswers(submittedValue){
 /* Since i could not get the returned numbers from the form I added these to push in answer so you can see the
 other code and how it works if you uncomment them one at a time starting from the top you can see the page change
 because of this I also can't really test to see if the game reset works*/
-// pushAnswers(72);
-// pushAnswers(63);
-// pushAnswers(10);
-// pushAnswers(20);
-// pushAnswers(31);
+pushAnswers(72);
+pushAnswers(63);
+pushAnswers(10);
+pushAnswers(20);
+pushAnswers(31);
 // pushAnswers(30);
-// pushAnswers(15);
+pushAnswers(29);
+
+
 
 logAnswer(submittedAnswersArray);
 console.log(submittedAnswersArray);
@@ -117,22 +119,33 @@ function howDidYouDo(correctAnswer, submittedAnswersArrayIndex){
     
     if (submittedAnswersArrayIndex === correctAnswer){
         result.innerText = "Winner!!";
-        alert("Winner");
         return "green";
     }
     else if (submittedAnswersArrayIndex >= (correctAnswer - 5) && submittedAnswersArrayIndex <= (correctAnswer + 5)){
+        if (submittedAnswersArray.length < 6){
         result.innerText = "You are within 5!!";
         return "green";
+        } else {
+        result.innerText = "You were close but you lost!! The correct answer is " + correctAnswer + ".";
+        return "green";
+        } 
     }
     else if (submittedAnswersArrayIndex >= (correctAnswer - 15) && submittedAnswersArrayIndex <= (correctAnswer + 15)){
+        if (submittedAnswersArray.length < 6){
         result.innerText = "You are within 15";
         return "yellow";
+        } else {
+            result.innerText = "Sorry you lost. The correct answer is " + correctAnswer + ".";;
+            return "yellow";
+        } 
     }
     else if (submittedAnswersArrayIndex < (correctAnswer - 15) || submittedAnswersArrayIndex > (correctAnswer + 15)){ 
+        if (submittedAnswersArray.length < 6){
         result.innerText = "Not even close.";
         return "red";        
+        } else {
+        result.innerText = "Sorry you lost. The correct answer is " + correctAnswer + ".";;
+        return "red";
+        } 
     }
-
 }
-
-
